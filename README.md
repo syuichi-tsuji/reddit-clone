@@ -3,7 +3,7 @@ A sample app to show how to create a Reddit Clone using create-react-app and Fir
 
 ## Installation
 ```
-git clone git@github.com:ghoshnirmalya/reddit-clone.git
+git clone git@github.com:sitepoint-editors/reddit-clone.git
 cd reddit-clone
 npm install
 ```
