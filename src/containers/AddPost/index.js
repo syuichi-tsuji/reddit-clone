@@ -20,7 +20,7 @@ class AddPost extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    
+
     this.props.firebase.ref('posts').push({
       title: this.state.title,
       upvote: 0,
@@ -35,18 +35,23 @@ class AddPost extends Component {
   render() {
     return (
       <div className="AddPost">
-        <input 
-          type="text" 
-          placeholder="Write the title of your post" 
-          onChange={ this.handleChange } 
+        <input
+          type="text"
+          placeholder="Write the title of your post"
+          onChange={ this.handleChange }
           value={ this.state.title }
         />
-        <button 
-          type="submit" 
+        <button
+          type="submit"
           onClick={ this.handleSubmit }
         >
           Submit
         </button>
+        <div>
+          <a href="/posts">
+            Back to posts
+          </a>
+        </div>
       </div>
     );
   }

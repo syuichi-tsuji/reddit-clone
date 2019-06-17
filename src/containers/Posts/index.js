@@ -58,10 +58,10 @@ class Posts extends Component {
                   <h2>Title: { posts[key].title }</h2>
                 </header>
                 <div>
-                  <span class="vote-count">
+                  <span className="vote-count">
                     Upvotes: { posts[key].upvote }
                   </span>
-                  <span class="vote-count">
+                  <span className="vote-count">
                     Downvotes: { posts[key].downvote }
                   </span>
                 </div>

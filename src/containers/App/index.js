@@ -33,6 +33,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <a className="button button-outline" href="/add-post">
+          Add Post
+        </a>
         {this.props.children && React.cloneElement(this.props.children, {
           // https://github.com/ReactTraining/react-router/blob/v3/examples/passing-props-to-children/app.js#L56-L58
           firebase: firebase.database(),
