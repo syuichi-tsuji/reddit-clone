@@ -37,25 +37,35 @@ class Posts extends Component {
       <div className="Posts">
         { Object.keys(posts).map(function(key) {
             return (
-              <div key={key}>
-                <div>Title: { posts[key].title }</div>
-                <div>Upvotes: { posts[key].upvote }</div>
-                <div>Downvotes: { posts[key].downvote }</div>
-                <div>
-                  <button 
+              <section key={key} className="post clearfix">
+                <div className="voting-buttons float-left">
+                  <button
+                    className="button"
                     onClick={ _this.handleUpvote.bind(this, posts[key], key) }
                     type="button"
                   >
                     Upvote
                   </button>
-                  <button 
+                  <button
+                    className="button"
                     onClick={ _this.handleDownvote.bind(this, posts[key], key) }
                     type="button"
                   >
                     Downvote
                   </button>
                 </div>
-              </div>
+                <header>
+                  <h2>Title: { posts[key].title }</h2>
+                </header>
+                <div>
+                  <span class="vote-count">
+                    Upvotes: { posts[key].upvote }
+                  </span>
+                  <span class="vote-count">
+                    Downvotes: { posts[key].downvote }
+                  </span>
+                </div>
+              </section>
             );
         })}
       </div>
